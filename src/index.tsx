@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import  GlobalStyle  from './globalStyle';
 
+const client = new QueryClient();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <QueryClientProvider client={client} >
+    <GlobalStyle/>
+      <App />
+  </QueryClientProvider>
+  ,
   document.getElementById('root')
 );
 
