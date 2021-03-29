@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
     border-radius: 20px 20px 0 0;
   }
 
-  section {
+  div {
     padding: 1rem;
     height: 100%;
   }

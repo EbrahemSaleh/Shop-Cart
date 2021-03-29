@@ -29,12 +29,13 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
         </div>
 
         <div className="buttons">
-          <Button color="secondary" >
+          <Button variant="contained" color="secondary" >
+            
             <RemoveIcon fontSize="small"  onClick={() => removeFromCart(item.id)}  />
             </Button>
           <p> {item.amount} </p>
-          <Button color="primary" >
-            <AddIcon  onClick={() => addToCart(item)} fontSize="small" />
+          <Button variant="contained"      color="primary"  >
+            <AddIcon  onClick={() => addToCart(item)} fontSize="small"   />
             </Button>
         </div>
       </div>

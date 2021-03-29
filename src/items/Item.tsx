@@ -6,7 +6,9 @@ import { CartItemType } from '../App';
 
 
 type Props = {
+
   item: CartItemType;
+
   handleAddToCart: (ClickedItem: CartItemType) => void;
 }
 
@@ -15,11 +17,11 @@ const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
   <>
   <Wrapper>
     <img src={item.image} alt={item.title} />
-    <section>
+    <div>
       <h3> {item.title} </h3>
       <p>{item.description}</p>
       <h3>{ item.price}$</h3>
-    </section>
+    </div>
     <Button  variant="contained" color="primary"  onClick={() => handleAddToCart(item) } > 
   Add To Cart
 </Button>

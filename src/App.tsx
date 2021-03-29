@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 
@@ -75,13 +77,14 @@ const App = () => {
 
   return (
 
-
+<React.Fragment>
     <Wrapper>
       <Drawer anchor="right"  open={openCart} onClose={() => setOpenCart(false)} > 
         <Cart
           cartItems={cartItems}
           addToCart={handleAddToCart}
-          removeFromCart ={handleRemoveFromCart}
+          removeFromCart={handleRemoveFromCart}
+          
         />
           </Drawer>
       
@@ -104,7 +107,9 @@ const App = () => {
         }
         
     </Grid>
-    </Wrapper>
+      </Wrapper>
+      
+      </React.Fragment>
   )
 }
 
